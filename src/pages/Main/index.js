@@ -46,6 +46,43 @@ export default class Main extends Component {
 
   state = {
     appName: 'T.I.S.E.',
+    mensagem: [
+      {
+        id: 1,
+        remet: 'Nome 1',
+        data: '10/04/2019',
+        msg:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non diam eget lorem aliquet porta quis in urna. Fusce ut.',
+      },
+      {
+        id: 2,
+        remet: 'Nome 2',
+        data: '09/04/2019',
+        msg:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non diam eget lorem aliquet porta quis in urna. Fusce ut.',
+      },
+      {
+        id: 3,
+        remet: 'Nome 3',
+        data: '08/04/2019',
+        msg:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non diam eget lorem aliquet porta quis in urna. Fusce ut.',
+      },
+      {
+        id: 4,
+        remet: 'Nome 4',
+        data: '07/04/2019',
+        msg:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non diam eget lorem aliquet porta quis in urna. Fusce ut.',
+      },
+      {
+        id: 5,
+        remet: 'Nome 5',
+        data: '06/04/2019',
+        msg:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non diam eget lorem aliquet porta quis in urna. Fusce ut.',
+      },
+    ],
   };
 
   componentDidMount() {
@@ -76,9 +113,11 @@ export default class Main extends Component {
         <View style={styles.header}>
           <Text style={styles.title}>{appName}</Text>
         </View>
-        <MainItem />
-        <MainItem />
-        <MainItem />
+        <MainItem detalhe={this.state.mensagem[0]} />
+        <MainItem detalhe={this.state.mensagem[1]} />
+        <MainItem detalhe={this.state.mensagem[2]} />
+        <MainItem detalhe={this.state.mensagem[3]} />
+        <MainItem detalhe={this.state.mensagem[4]} />
       </View>
     );
   }

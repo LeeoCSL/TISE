@@ -45,7 +45,6 @@ export default class Lista extends Component {
   );
 
   render() {
-    const { appName } = this.state;
     return (
       <View style={styles.container}>
         {this.renderOverlay()}

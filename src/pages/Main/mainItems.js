@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
     marginVertical: 5,
+    fontSize: 20,
   },
   icones: {
     justifyContent: 'flex-end',
@@ -51,26 +52,25 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
 });
-export default class MainItem extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.texts}>
-          <Text style={styles.data}>Data da Mensagem</Text>
-          <Text style={styles.remetente}>Remetente</Text>
-        </View>
-        <View style={styles.icones}>
-          <TouchableOpacity>
-            <Icon name="play-circle" size={30} color="#000" style={styles.icone1} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Icon name="save" size={30} color="#000" style={styles.icone2} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Icon name="trash" size={30} color="#000" style={styles.icone3} />
-          </TouchableOpacity>
-        </View>
-      </View>
-    );
-  }
-}
+
+const MainItem = ({ detalhe }) => (
+  <View style={styles.container}>
+    <View style={styles.texts}>
+      <Text style={styles.remetente}>{detalhe.remet}</Text>
+      <Text style={styles.data}>{detalhe.data}</Text>
+    </View>
+    <View style={styles.icones}>
+      <TouchableOpacity>
+        <Icon name="play-circle" size={30} color="#000" style={styles.icone1} />
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Icon name="save" size={30} color="#000" style={styles.icone2} />
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Icon name="trash" size={30} color="#000" style={styles.icone3} />
+      </TouchableOpacity>
+    </View>
+  </View>
+);
+
+export default MainItem;
